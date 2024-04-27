@@ -27,7 +27,15 @@ function displayCountries(displaySort){
     countries.sort((a, b) => b.inhabitants - a.inhabitants);
 
     // table header
-    tableText += '<tr><td>Name</td><td>Hauptstadt</td><td>Größe <a href="https://wikipedia.org">Wikipedia</a></td><td>Größe <a href="https://moreorless.io">More or Less</a></td></tr>';
+    tableText += `
+    <tr>
+        <td>Name</td>
+        <td>Hauptstadt</td>
+        <td>Größe <a href="https://wikipedia.org">Wikipedia</a></td>
+        <td>Größe <a href="https://moreorless.io">More or Less</a></td>
+        <td>Einwohner</td>
+    </tr>
+    `;
 
     for (let i = 0; i < countries.length; i ++) {
 
@@ -38,6 +46,7 @@ function displayCountries(displaySort){
             <td>${countries[i].capital}</td>
             <td>${countries[i].sizeWiki}</td>
             <td>${countries[i].sizeMoreOrLess}</td>
+            <td>${countries[i].inhabitants}</td>
         </tr>
         `;
     }
