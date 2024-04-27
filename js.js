@@ -86,9 +86,9 @@ function displayCountries(displaySort){
         <tr>
             <td>${countries[i].name}</td>
             <td>${countries[i].capital}</td>
-            <td>${countries[i].sizeWiki}</td>
-            <td>${countries[i].sizeMoreOrLess}</td>
-            <td>${countries[i].inhabitants}</td>
+            <td style="text-align: right;">${countries[i].sizeWiki}</td>
+            <td style="text-align: right;">${countries[i].sizeMoreOrLess}</td>
+            <td style="text-align: right;">${countries[i].inhabitants}</td>
         </tr>
         `;
     }
