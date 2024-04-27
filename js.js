@@ -4,18 +4,18 @@ window.onload = () => {
 
 const countries = [
     {
-        name: '',
-        capital: '',
-        sizeWiki: 0,
+        name: 'Afghanistan',
+        capital: 'Kabul',
+        sizeWiki: 652_230,
         sizeMoreOrLess: 0,
-        inhabitants: 1
+        inhabitants: 41_100_000
     },
     {
-        name: '',
-        capital: '',
-        sizeWiki: 0,
+        name: 'Ägypten',
+        capital: 'Kairo',
+        sizeWiki: 1_001_450,
         sizeMoreOrLess: 0,
-        inhabitants: 2
+        inhabitants: 103_500_000
     }
 ];
 
