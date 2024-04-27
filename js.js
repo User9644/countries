@@ -44,9 +44,9 @@ function displayCountries(displaySort){
 
     // sort array
     if (displaySort === 0){
-        countries.sort((a, b) => {if([a.name, b.name].sort()[0] == a.name) return 1; else return -1;})
+        countries.sort((a, b) => {if([a.name, b.name].sort()[0] == a.name) return -1; else return 1;})
     } else if(displaySort === 1){
-        countries.sort((a, b) => {if([a.capital, b.capital].sort()[0] == a.capital) return 1; else return -1;})
+        countries.sort((a, b) => {if([a.capital, b.capital].sort()[0] == a.capital) return -1; else return 1;})
     } else if(displaySort === 2){
         countries.sort((a, b) => b.sizeWiki - a.sizeWiki);
     } else if(displaySort === 3){
