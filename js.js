@@ -16,6 +16,13 @@ const countries = [
         sizeWiki: 1_001_450,
         sizeMoreOrLess: 1,
         inhabitants: 103_500_000
+    },
+    {
+        name: 'Albanien',
+        capital: 'Tirana',
+        sizeWiki: 28_748,
+        sizeMoreOrLess: 1.5,
+        inhabitants: 2_800_00
     }
 ];
 
