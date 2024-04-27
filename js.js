@@ -43,4 +43,7 @@ function displayCountries(displaySort){
 
     // end table
     tableText += '</table>';
+
+    // add table to html
+    document.getElementById('countryTable').innerHTML = tableText;
 }
