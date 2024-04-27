@@ -1,3 +1,7 @@
+window.onload = () => {
+    displayCountries(0);
+};
+
 const countries = [
     {
         name: '',
@@ -24,16 +28,46 @@ function displayCountries(displaySort){
     let tableText = '<table style="margin: 0; border-radius: 0;">';
 
     // sort array
-    countries.sort((a, b) => b.inhabitants - a.inhabitants);
+    if (displaySort === 0){
+        countries.sort((a, b) => {if([a.name, b.name].sort()[0] == a.name) return 1; else return -1;})
+    } else if(displaySort === 1){
+        countries.sort((a, b) => {if([a.capital, b.capital].sort()[0] == a.capital) return 1; else return -1;})
+    } else if(displaySort === 2){
+        countries.sort((a, b) => b.sizeWiki - a.sizeWiki);
+    } else if(displaySort === 3){
+        countries.sort((a, b) => b.sizeMoreOrLess - a.sizeMoreOrLess);
+    } else if(displaySort === 4){
+        countries.sort((a, b) => b.inhabitants - a.inhabitants);
+    }
 
     // table header
-    tableText += `
+    tableText += `<button onclick="displayCountries(0)"></button>
     <tr>
-        <td>Name</td>
-        <td>Hauptstadt</td>
-        <td>Größe <a href="https://wikipedia.org">Wikipedia</a></td>
-        <td>Größe <a href="https://moreorless.io">More or Less</a></td>
-        <td>Einwohner</td>
+        <td>
+            <button onclick="displayCountries(0)">
+                Name
+            </button>
+        </td>
+        <td>
+            <button onclick="displayCountries(1)">
+                Hauptstadt
+            </button>
+        </td>
+        <td>
+            <button onclick="displayCountries(2)">
+            Größe <a href="https://wikipedia.org">Wikipedia</a>
+            </button>
+        </td>
+        <td>
+            <button onclick="displayCountries(3)">
+                Größe <a href="https://moreorless.io">More or Less</a>
+            </button>
+        </td>
+        <td>
+            <button onclick="displayCountries(4)">
+                Einwohner
+            </button>
+        </td>
     </tr>
     `;
 
