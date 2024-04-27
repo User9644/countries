@@ -7,14 +7,14 @@ const countries = [
         name: 'Afghanistan',
         capital: 'Kabul',
         sizeWiki: 652_230,
-        sizeMoreOrLess: 0,
+        sizeMoreOrLess: 2,
         inhabitants: 41_100_000
     },
     {
         name: 'Ägypten',
         capital: 'Kairo',
         sizeWiki: 1_001_450,
-        sizeMoreOrLess: 0,
+        sizeMoreOrLess: 1,
         inhabitants: 103_500_000
     }
 ];
@@ -41,7 +41,7 @@ function displayCountries(displaySort){
     }
 
     // table header
-    tableText += `<button onclick="displayCountries(0)"></button>
+    tableText += `
     <tr>
         <td>
             <button onclick="displayCountries(0)">
