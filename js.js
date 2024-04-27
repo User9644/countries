@@ -21,8 +21,9 @@ function displayCountries(displaySort){
     document.getElementById('countryTable').innerHTML = '';
 
     // start new table
-    let tableText = '<table>';
+    let tableText = '<table style="margin: 0; border-radius: 0;">';
 
+    // sort array
     countries.sort((a, b) => b.inhabitants - a.inhabitants);
 
     // table header
