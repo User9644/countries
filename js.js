@@ -25,7 +25,15 @@ function displayCountries(displaySort){
     document.getElementById('countryTable').innerHTML = '';
 
     // start new table
-    let tableText = '<table style="margin: 0; border-radius: 0; border-width: 1px;">';
+    let tableText = `
+    <table style="
+        margin: 0; 
+        border-radius: 0; 
+        border-width: 1px; 
+        border-color: black; 
+        border-style: solid;
+    ">
+    `;
 
     // sort array
     if (displaySort === 0){
