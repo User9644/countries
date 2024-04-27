@@ -16,9 +16,31 @@ const countries = [
 ];
 
 function displayCountries(displaySort){
+
+    // delete old table
     document.getElementById('countryTable').innerHTML = '';
 
-    console.log(countries.sort((a, b) => a.inhabitants - b.inhabitants));
+    // start new table
+    let tableText = '<table>';
 
-    console.log(countries);
+    countries.sort((a, b) => b.inhabitants - a.inhabitants);
+
+    // table header
+    tableText += '<tr><td>Name</td><td>Hauptstadt</td><td>Größe <a href="https://wikipedia.org">Wikipedia</a></td><td>Größe <a href="https://moreorless.io">More or Less</a></td></tr>';
+
+    for (let i = 0; i < countries.length; i ++) {
+
+        // one country
+        tableText += `
+        <tr>
+            <td>${countries[i].name}</td>
+            <td>${countries[i].capital}</td>
+            <td>${countries[i].sizeWiki}</td>
+            <td>${countries[i].sizeMoreOrLess}</td>
+        </tr>
+        `;
+    }
+
+    // end table
+    tableText += '</table>';
 }
